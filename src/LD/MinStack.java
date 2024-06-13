@@ -1,6 +1,6 @@
 package LD;
 
-public class MinStack_155 {
+public class MinStack {
 
     private Node head;
 
@@ -38,7 +38,7 @@ public class MinStack_155 {
 
 
     public static void main(String[] args){
-        MinStack_155 minStack155 = new MinStack_155();
+        MinStack minStack155 = new MinStack();
         minStack155.push(4);
         minStack155.push(1);
         minStack155.push(-4);
