@@ -1,9 +1,9 @@
 # System Design question and solution
 This repository includes the solutions for LeetCode's design problem and various real-world low-level system design implementations, all in Java.
 
-Leetcode Design Question : [Link]()
+Leetcode Design Question : [Link](https://github.com/GuptaRoshan/design/blob/main/src/LD/leetcode-design.md)
 </br>
-Low Level Design Question : [Link]()
+Low Level Design Question : [Link](https://github.com/GuptaRoshan/design/blob/main/src/LD/low-level-design.md)
 
 ## About
 Here, you will find numerous LeetCode design problems and low-level system design solutions, with extensive focus on creating clean, maintainable code. I have put my emphasis on problem-solving and understanding the basic principles/practices behind designing a complex system. This repository is perfect for someone preparing for software interviews or even for seasoned professionals to brush up their skills.
