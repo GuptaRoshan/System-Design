@@ -68,12 +68,13 @@ public class HashTable {
     private void insertDoubleHashing(String key) {
         int index = hash(key);
         int stepSize = secondaryHash(key);
+        int i = 0;
 
         // Hash Function: (index + i * stepSize) % size
-        while (table[index] != null && !table[index].equals(DELETED)) {
-            index = (index + stepSize) % size;
+        while (table[(index + i * stepSize) % size] != null && !table[(index + i * stepSize) % size].equals(DELETED)) {
+            i++;
         }
-        table[index] = key;
+        table[(index + i * stepSize) % size] = key;
     }
 
     // Common remove method
@@ -122,13 +123,13 @@ public class HashTable {
     private void removeDoubleHashing(String key) {
         int index = hash(key);
         int stepSize = secondaryHash(key);
-        while (table[index] != null) {
-            if (table[index].equals(key)) {
-                table[index] = DELETED;
-                return;
-            }
-            index = (index + stepSize) % size;
+        int i = 0;
+
+        while (table[(index + i * stepSize) % size]  != null && !table[(index + i * stepSize) % size].equals(key)) {
+            i++;
         }
+
+        table[(index + i * stepSize) % size] = DELETED;
     }
 
     // Common search method
