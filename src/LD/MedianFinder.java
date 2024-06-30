@@ -9,7 +9,7 @@ public class MedianFinder {
     private final PriorityQueue<Integer> large = new PriorityQueue<>();
     private boolean even = true;
 
-    public synchronized double findMedian() {
+    public double findMedian() {
         assert small.peek() != null;
         assert large.peek() != null;
 
@@ -20,7 +20,7 @@ public class MedianFinder {
         }
     }
 
-    public synchronized void addNum(int num) {
+    public void addNum(int num) {
         if (even) {
             large.offer(num);
             small.offer(large.poll());
